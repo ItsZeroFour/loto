@@ -384,6 +384,22 @@ export interface ApiMobilnayaLotereyaMobilnayaLotereya
     golden_barrel_title: Attribute.String;
     golden_barrel_text_1: Attribute.Text;
     golden_barrel_text_2: Attribute.Text;
+    advantage_item_image_1: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    advantage_item_desc_1: Attribute.Text;
+    advantage_item_image_2: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    advantage_item_desc_2: Attribute.Text;
+    advantage_item_image_3: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    advantage_item_desc_3: Attribute.Text;
+    advantage_item_image_4: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    advantage_item_desc_4: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

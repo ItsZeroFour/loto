@@ -1,0 +1,26 @@
+.advantages {
+  margin-top: 40px;
+}
+
+.advantages__wrapper {
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      gap: 20px;
+
+      width: 265px;
+      height: 330px;
+      border: 1px solid var(--color-black);
+      border-radius: 10px;
+      padding: 20px;
+    }
+  }
+}

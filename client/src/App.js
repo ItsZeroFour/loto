@@ -7,6 +7,7 @@ import GoldenBarrel from "./components/golden_barrel/GoldenBarrel";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import Advantages from "./components/advantages/Advantages";
 
 function App() {
   const [data, setData] = useState(null);
@@ -65,6 +66,16 @@ function App() {
                 text1={data.golden_barrel_text_1}
                 text2={data.golden_barrel_text_2}
                 linkUrl={data.link_url}
+              />
+              <Advantages
+                advImage1={data.advantage_item_image_1.data.attributes.url}
+                advText1={data.advantage_item_desc_1}
+                advImage2={data.advantage_item_image_2.data.attributes.url}
+                advText2={data.advantage_item_desc_2}
+                advImage3={data.advantage_item_image_3.data.attributes.url}
+                advText3={data.advantage_item_desc_3}
+                advImage4={data.advantage_item_image_4.data.attributes.url}
+                advText5={data.advantage_item_desc_4}
               />
             </main>
             <Footer />

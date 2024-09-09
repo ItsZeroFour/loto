@@ -54,6 +54,62 @@
     },
     "golden_barrel_text_2": {
       "type": "text"
+    },
+    "advantage_item_image_1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "advantage_item_desc_1": {
+      "type": "text"
+    },
+    "advantage_item_image_2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "advantage_item_desc_2": {
+      "type": "text"
+    },
+    "advantage_item_image_3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "advantage_item_desc_3": {
+      "type": "text"
+    },
+    "advantage_item_image_4": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "advantage_item_desc_4": {
+      "type": "text"
     }
   }
 }
