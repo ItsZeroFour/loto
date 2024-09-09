@@ -1,12 +1,15 @@
 import React from "react";
 import style from "./Header.module.scss";
+import { Link } from "react-router-dom";
 
 const Header = ({ logo }) => {
   return (
     <header className={style.header}>
       <div className="container">
         <div className={style.header__wrapper}>
-          {logo && <img src={`${process.env.REACT_APP_SERVER_URL}${logo}`} />}
+          <Link to="/">
+            {logo && <img src={`${process.env.REACT_APP_SERVER_URL}${logo}`} alt="Логотип мобильной лотереи" />}
+          </Link>
         </div>
       </div>
     </header>

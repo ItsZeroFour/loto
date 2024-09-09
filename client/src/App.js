@@ -1,32 +1,76 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
+import Head from "./components/head/Head";
 import axios from "./utils/axios";
+import GoldenBarrel from "./components/golden_barrel/GoldenBarrel";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 function App() {
-  const [logo, setLogo] = useState("");
+  const [data, setData] = useState(null);
+  const containerRef = useRef(null);
 
-  const getLogo = async () => {
+  const getData = async () => {
     try {
-      const { data } = await axios.get("/api/logo?populate=*");
+      const { data } = await axios.get("/api/mobilnaya-lotereya?populate=*");
 
-      setLogo(data.data.attributes.logo.data.attributes.url);
+      setData(data.data.attributes);
     } catch (err) {
       console.log(err);
     }
   };
 
   useEffect(() => {
-    getLogo();
+    getData();
   }, []);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const scroll = new LocomotiveScroll({
+        el: containerRef.current,
+        smooth: true,
+      });
+
+      return () => scroll.destroy();
+    }
+  }, []);
+
+  console.log(data);
 
   return (
     <div className="App">
-      <div className="page">
-        <Header logo={logo} />
-        <main></main>
-        <Footer />
-      </div>
+      {!data ? (
+        <p>Загрузка...</p>
+      ) : (
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+          }}
+          watch={[]}
+          containerRef={containerRef}
+        >
+          <div className="page">
+            <Header logo={data.logo.data.attributes.url} />
+            <main data-scroll-container ref={containerRef}>
+              <Head
+                title={data.title}
+                desc={data.description}
+                linkUrl={data.link_url}
+                headBg={data.head_bg.data.attributes.url}
+              />
+              <GoldenBarrel
+                title={data.golden_barrel_title}
+                text1={data.golden_barrel_text_1}
+                text2={data.golden_barrel_text_2}
+                linkUrl={data.link_url}
+              />
+            </main>
+            <Footer />
+          </div>
+        </LocomotiveScrollProvider>
+      )}
     </div>
   );
 }

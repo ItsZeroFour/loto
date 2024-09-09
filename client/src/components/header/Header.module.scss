@@ -1,0 +1,15 @@
+.header {
+  position: relative;
+}
+
+.header__wrapper {
+  position: absolute;
+  padding-top: 20px;
+
+  a {
+    img {
+      width: 400px;
+      height: auto;
+    }
+  }
+}

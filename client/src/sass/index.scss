@@ -93,3 +93,8 @@ li {
   background: #181717;
   padding: 60px;
 }
+
+[data-scroll-container] {
+  height: 100%;
+  overflow: hidden;
+}

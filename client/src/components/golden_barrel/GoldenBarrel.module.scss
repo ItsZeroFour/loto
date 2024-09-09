@@ -1,0 +1,140 @@
+.golden_barrel {
+  background: var(--color-red);
+  padding-top: 100px;
+}
+
+.golden_barrel__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 40px;
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+    color: var(--color-white);
+
+    span {
+      color: var(--color-yellow);
+      font-family: "Montserrat-eb", sans-serif;
+      font-weight: 800;
+    }
+
+    width: 570px;
+  }
+
+  .golden_barrel__barrel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.golden_barrel__example {
+  margin-left: 70%;
+}
+
+.golden_barrel__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    padding: 25px 115px;
+    background: var(--color-dark-red);
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+    color: var(--color-white);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.golden_barrel__items {
+  position: relative;
+  height: 20px;
+
+  .golden_barrel__left {
+    position: absolute;
+    top: -50%;
+    background: var(--color-dark-red);
+    border-radius: 20px;
+
+    p {
+      padding: 10px;
+      width: 315px;
+      color: var(--color-white);
+      font-family: "Montserrat-bd", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 78px;
+      background-image: url("../../assets/icons/golden_barrel_decor-left.svg");
+      background-repeat: no-repeat;
+
+      top: 45%;
+      left: -4%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 78px;
+      background-image: url("../../assets/icons/golden_barrel_decor-right.svg");
+      background-repeat: no-repeat;
+
+      top: -10%;
+      right: -4%;
+    }
+  }
+
+  .golden_barrel__right {
+    position: absolute;
+    top: -2500%;
+    right: 0%;
+    background: var(--color-dark-red);
+    border-radius: 20px;
+
+    p {
+      padding: 10px;
+      width: 335px;
+      color: var(--color-white);
+      font-family: "Montserrat-bd", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 78px;
+      background-image: url("../../assets/icons/golden_barrel_decor-left.svg");
+      background-repeat: no-repeat;
+
+      top: 45%;
+      left: -4%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 78px;
+      background-image: url("../../assets/icons/golden_barrel_decor-right.svg");
+      background-repeat: no-repeat;
+
+      top: -10%;
+      right: -4%;
+    }
+  }
+}

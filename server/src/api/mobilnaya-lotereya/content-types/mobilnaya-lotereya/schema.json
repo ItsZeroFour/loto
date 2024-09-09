@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "mobilnaya_lotereyas",
+  "info": {
+    "singularName": "mobilnaya-lotereya",
+    "pluralName": "mobilnaya-lotereyas",
+    "displayName": "Мобильная лотерея",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "link_url": {
+      "type": "string",
+      "required": true
+    },
+    "head_bg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "golden_barrel_title": {
+      "type": "string"
+    },
+    "golden_barrel_text_1": {
+      "type": "text"
+    },
+    "golden_barrel_text_2": {
+      "type": "text"
+    }
+  }
+}

@@ -362,24 +362,42 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiLogoLogo extends Schema.SingleType {
-  collectionName: 'logos';
+export interface ApiMobilnayaLotereyaMobilnayaLotereya
+  extends Schema.SingleType {
+  collectionName: 'mobilnaya_lotereyas';
   info: {
-    singularName: 'logo';
-    pluralName: 'logos';
-    displayName: 'logo';
+    singularName: 'mobilnaya-lotereya';
+    pluralName: 'mobilnaya-lotereyas';
+    displayName: '\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u0430\u044F \u043B\u043E\u0442\u0435\u0440\u0435\u044F';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    link_url: Attribute.String & Attribute.Required;
+    head_bg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    golden_barrel_title: Attribute.String;
+    golden_barrel_text_1: Attribute.Text;
+    golden_barrel_text_2: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::logo.logo', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::mobilnaya-lotereya.mobilnaya-lotereya',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::logo.logo', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::mobilnaya-lotereya.mobilnaya-lotereya',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -820,7 +838,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::logo.logo': ApiLogoLogo;
+      'api::mobilnaya-lotereya.mobilnaya-lotereya': ApiMobilnayaLotereyaMobilnayaLotereya;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
