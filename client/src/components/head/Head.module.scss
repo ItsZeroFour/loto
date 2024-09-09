@@ -30,6 +30,11 @@
     span {
       color: var(--color-yellow);
     }
+
+    @media (max-width: 680px) {
+      width: 100%;
+      font-size: 32px;
+    }
   }
 
   a {
@@ -52,6 +57,11 @@
 .head__desc {
   width: 410px;
   color: var(--color-white);
+
+  @media (max-width: 680px) {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 .head__right {
@@ -86,6 +96,10 @@
         font-size: 32px;
         font-family: "Montserrat-bd", sans-serif;
       }
+
+      @media (max-width: 495px) {
+        display: none;
+      }
     }
 
     &:nth-child(2) {
@@ -115,6 +129,10 @@
         font-size: 16px;
         font-family: "Montserrat-bd", sans-serif;
         color: var(--color-yellow);
+      }
+
+      @media (max-width: 495px) {
+        display: none;
       }
     }
   }

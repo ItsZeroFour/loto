@@ -10,6 +10,10 @@
     img {
       width: 400px;
       height: auto;
+
+      @media (max-width: 454px) {
+        width: 100%;
+      }
     }
   }
 }
