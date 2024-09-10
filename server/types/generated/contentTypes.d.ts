@@ -400,6 +400,24 @@ export interface ApiMobilnayaLotereyaMobilnayaLotereya
       'images' | 'files' | 'videos' | 'audios'
     >;
     advantage_item_desc_4: Attribute.Text;
+    winner_image_1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    winner_title_1: Attribute.String;
+    winner_count_1: Attribute.String;
+    winner_image_2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    winner_title_2: Attribute.String;
+    winner_count_2: Attribute.String;
+    winner_image_3: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    winner_title_3: Attribute.String;
+    winner_count_3: Attribute.String;
+    winners_description: Attribute.Text & Attribute.Required;
+    how_to_participate_title_1: Attribute.String;
+    how_to_participate_desc_1: Attribute.Text;
+    how_to_participate_title_2: Attribute.String;
+    how_to_participate_desc_2: Attribute.Text;
+    how_to_participate_title_3: Attribute.String;
+    how_to_participate_desc_3: Attribute.Text;
+    how_to_participate_title_4: Attribute.String;
+    how_to_participate_desc_4: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

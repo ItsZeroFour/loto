@@ -1,0 +1,54 @@
+.how_to_participate {
+  background-image: url("../../assets/images/how_to_participate_bg.png");
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 930px;
+  margin-top: 60px;
+}
+
+.how_to_participate__wrapper {
+  padding-top: 200px;
+  padding-bottom: 160px;
+
+  h2 {
+    font-size: 32px;
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  ul {
+    margin-top: 60px;
+
+    li {
+      color: var(--color-white);
+      cursor: pointer;
+
+      .how_to_participate__item__text {
+        width: 700px;
+
+        border-top: 1px solid var(--color-white);
+        border-bottom: 1px solid var(--color-white);
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h3 {
+            font-size: 24px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+          }
+        }
+
+        p {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
