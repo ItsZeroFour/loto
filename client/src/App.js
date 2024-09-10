@@ -75,7 +75,7 @@ function App() {
                 advImage3={data.advantage_item_image_3.data.attributes.url}
                 advText3={data.advantage_item_desc_3}
                 advImage4={data.advantage_item_image_4.data.attributes.url}
-                advText5={data.advantage_item_desc_4}
+                advText4={data.advantage_item_desc_4}
               />
             </main>
             <Footer />
