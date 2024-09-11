@@ -8,6 +8,8 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Advantages from "./components/advantages/Advantages";
+import Winners from "./components/winners/Winners";
+import HowToParticipate from "./components/how_to_participate/HowToParticipate";
 
 function App() {
   const [data, setData] = useState(null);
@@ -76,6 +78,31 @@ function App() {
                 advText3={data.advantage_item_desc_3}
                 advImage4={data.advantage_item_image_4.data.attributes.url}
                 advText4={data.advantage_item_desc_4}
+              />
+
+              <Winners
+                winnerImg1={data.winner_image_1.data.attributes.url}
+                winnerTitle1={data.winner_title_1}
+                winnerCount1={data.winner_count_1}
+                winnerImg2={data.winner_image_2.data.attributes.url}
+                winnerTitle2={data.winner_title_2}
+                winnerCount2={data.winner_count_2}
+                winnerImg3={data.winner_image_3.data.attributes.url}
+                winnerTitle3={data.winner_title_3}
+                winnerCount3={data.winner_count_3}
+                winnersDescription={data.winners_description}
+                linkUrl={data.link_url}
+              />
+
+              <HowToParticipate
+                htpTitle1={data.how_to_participate_title_1}
+                htpDesc1={data.how_to_participate_desc_1}
+                htpTitle2={data.how_to_participate_title_2}
+                htpDesc2={data.how_to_participate_desc_2}
+                htpTitle3={data.how_to_participate_title_3}
+                htpDesc3={data.how_to_participate_desc_3}
+                htpTitle4={data.how_to_participate_title_4}
+                htpDesc4={data.how_to_participate_desc_4}
               />
             </main>
             <Footer />

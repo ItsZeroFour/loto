@@ -1,0 +1,92 @@
+.winners {
+  margin-top: 40px;
+}
+
+.winners__wrapper {
+  h2 {
+    font-size: 40px;
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+  }
+
+  ul {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .winner__item__image {
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        border: 1px solid var(--color-black);
+
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          margin-top: 40px;
+        }
+      }
+
+      h3 {
+        font-size: 24px;
+        font-family: "Montserrat-bd", sans-serif;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 20px;
+
+        span {
+          color: var(--color-yellow);
+        }
+      }
+    }
+  }
+}
+
+.winners__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+
+  margin-top: 60px;
+
+  h3 {
+    font-size: 32px;
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+  }
+
+  p {
+    width: 620px;
+  }
+
+  a {
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+    padding: 10px 128px;
+    background: var(--color-yellow);
+    color: var(--color-white);
+    border-radius: 30px;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      box-shadow: 0px 0px 10px var(--color-yellow);
+    }
+  }
+}
