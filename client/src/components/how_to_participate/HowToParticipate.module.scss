@@ -2,9 +2,18 @@
   background-image: url("../../assets/images/how_to_participate_bg.png");
   // background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   min-height: 930px;
   margin-top: 60px;
+
+  @media (min-width: 1900px) {
+    background-size: cover;
+  }
+
+  @media (max-width: 1450px) {
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .how_to_participate__wrapper {
@@ -47,6 +56,10 @@
 
         p {
           margin-top: 20px;
+        }
+
+        @media (max-width: 740px) {
+          width: 100%;
         }
       }
     }
