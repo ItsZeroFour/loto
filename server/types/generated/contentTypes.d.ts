@@ -418,6 +418,18 @@ export interface ApiMobilnayaLotereyaMobilnayaLotereya
     how_to_participate_desc_3: Attribute.Text;
     how_to_participate_title_4: Attribute.String;
     how_to_participate_desc_4: Attribute.Text;
+    where_buy_title: Attribute.String;
+    where_buy_item_title_1: Attribute.String;
+    where_buy_item_text_1: Attribute.Text;
+    where_buy_item_title_2: Attribute.String;
+    where_buy_item_text_2: Attribute.Text;
+    where_buy_item_title_3: Attribute.String;
+    where_buy_item_text_3: Attribute.Text;
+    where_buy_item_title_4: Attribute.String;
+    where_buy_item_text_4: Attribute.Text;
+    email: Attribute.String & Attribute.Required;
+    phone: Attribute.String & Attribute.Required;
+    footer_description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
