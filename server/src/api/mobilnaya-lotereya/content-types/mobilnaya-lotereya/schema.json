@@ -219,11 +219,11 @@
     },
     "email": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "phone": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "footer_description": {
       "type": "text"

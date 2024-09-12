@@ -427,8 +427,8 @@ export interface ApiMobilnayaLotereyaMobilnayaLotereya
     where_buy_item_text_3: Attribute.Text;
     where_buy_item_title_4: Attribute.String;
     where_buy_item_text_4: Attribute.Text;
-    email: Attribute.String & Attribute.Required;
-    phone: Attribute.String & Attribute.Required;
+    email: Attribute.String;
+    phone: Attribute.String;
     footer_description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
