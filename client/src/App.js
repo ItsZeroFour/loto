@@ -46,7 +46,10 @@ function App() {
   return (
     <div className="App">
       {!data ? (
-        <p>Загрузка...</p>
+        <div class="preloader">
+          <div class="circle circle_green"></div>
+          <div class="circle circle_red"></div>
+        </div>
       ) : (
         <LocomotiveScrollProvider
           options={{
