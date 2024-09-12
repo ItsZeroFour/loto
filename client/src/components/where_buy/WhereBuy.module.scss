@@ -1,0 +1,93 @@
+.where_buy {
+  margin-top: 70px;
+}
+
+.where_buy__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+    font-size: 40px;
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+    width: 520px;
+
+    @media (max-width: 600px) {
+      font-size: 28px;
+      width: 100%;
+    }
+  }
+
+  p {
+    a {
+      color: var(--color-black);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.where_buy__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    width: 550px;
+    height: 220px;
+    padding: 20px;
+
+    border: 1px solid var(--color-yellow);
+    border-radius: 20px;
+
+    h3 {
+      font-size: 24px;
+      font-family: "Montserrat-bd", sans-serif;
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      padding: 10px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.where_buy__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  a {
+    padding: 17px 120px;
+    background: var(--color-red);
+    color: var(--color-white);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-family: "Montserrat-bd", sans-serif;
+    font-weight: 700;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      padding: 17px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

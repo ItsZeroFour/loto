@@ -8,7 +8,7 @@ const Header = ({ logo }) => {
       <div className="container">
         <div className={style.header__wrapper}>
           <Link to="/">
-            {logo && <img src={`${process.env.REACT_APP_SERVER_URL}${logo}`} alt="Логотип мобильной лотереи" />}
+            {logo && <img src={`${process.env.REACT_APP_SERVER_URL}api${logo}`} alt="Логотип мобильной лотереи" />}
           </Link>
         </div>
       </div>

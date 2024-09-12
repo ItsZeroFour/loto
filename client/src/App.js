@@ -10,6 +10,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import Advantages from "./components/advantages/Advantages";
 import Winners from "./components/winners/Winners";
 import HowToParticipate from "./components/how_to_participate/HowToParticipate";
+import WhereBuy from "./components/where_buy/WhereBuy";
 
 function App() {
   const [data, setData] = useState(null);
@@ -54,9 +55,9 @@ function App() {
           watch={[]}
           containerRef={containerRef}
         >
-          <div className="page">
+          <div className="page" data-scroll-container ref={containerRef}>
             <Header logo={data.logo.data.attributes.url} />
-            <main data-scroll-container ref={containerRef}>
+            <main>
               <Head
                 title={data.title}
                 desc={data.description}
@@ -104,8 +105,27 @@ function App() {
                 htpTitle4={data.how_to_participate_title_4}
                 htpDesc4={data.how_to_participate_desc_4}
               />
+
+              <WhereBuy
+                wbTitle={data.where_buy_title}
+                wbItemTitle1={data.where_buy_item_title_1}
+                wbItemText1={data.where_buy_item_text_1}
+                wbItemTitle2={data.where_buy_item_title_2}
+                wbItemText2={data.where_buy_item_text_2}
+                wbItemTitle3={data.where_buy_item_title_3}
+                wbItemText3={data.where_buy_item_text_3}
+                wbItemTitle4={data.where_buy_item_title_4}
+                wbItemText4={data.where_buy_item_text_4}
+                linkUrl={data.link_url}
+              />
             </main>
-            <Footer />
+
+            <Footer
+              email={data.email}
+              phone={data.phone}
+              footer_desc={data.footer_description}
+              logo={data.logo.data.attributes.url}
+            />
           </div>
         </LocomotiveScrollProvider>
       )}

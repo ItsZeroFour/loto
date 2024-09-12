@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Head = ({ title, desc, linkUrl, headBg }) => {
   return (
-    <section className={style.head__cover}>
+    <section className={style.head__cover} id="head">
       <div
         className={style.head}
         style={{
