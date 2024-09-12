@@ -189,6 +189,44 @@
     },
     "how_to_participate_desc_4": {
       "type": "text"
+    },
+    "where_buy_title": {
+      "type": "string"
+    },
+    "where_buy_item_title_1": {
+      "type": "string"
+    },
+    "where_buy_item_text_1": {
+      "type": "text"
+    },
+    "where_buy_item_title_2": {
+      "type": "string"
+    },
+    "where_buy_item_text_2": {
+      "type": "text"
+    },
+    "where_buy_item_title_3": {
+      "type": "string"
+    },
+    "where_buy_item_text_3": {
+      "type": "text"
+    },
+    "where_buy_item_title_4": {
+      "type": "string"
+    },
+    "where_buy_item_text_4": {
+      "type": "text"
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "footer_description": {
+      "type": "text"
     }
   }
 }
