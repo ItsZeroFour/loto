@@ -72,6 +72,7 @@ function App() {
                 text1={data.golden_barrel_text_1}
                 text2={data.golden_barrel_text_2}
                 linkUrl={data.link_url}
+                gbImage={data.golden_barrel_image.data.attributes.url}
               />
               <Advantages
                 advImage1={data.advantage_item_image_1.data.attributes.url}

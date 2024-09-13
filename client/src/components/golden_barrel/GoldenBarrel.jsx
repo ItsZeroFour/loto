@@ -4,7 +4,7 @@ import goldenbarrel from "../../assets/images/golden_barrel.png";
 import lotoExample from "../../assets/images/loto_gb.svg";
 import { Link } from "react-router-dom";
 
-const GoldenBarrel = ({ title, text1, text2, linkUrl }) => {
+const GoldenBarrel = ({ title, text1, text2, linkUrl, gbImage }) => {
   return (
     <section className={style.golden_barrel}>
       <div className="container">
@@ -12,7 +12,10 @@ const GoldenBarrel = ({ title, text1, text2, linkUrl }) => {
           <h2 dangerouslySetInnerHTML={{ __html: title }} />
 
           <div className={style.golden_barrel__barrel}>
-            <img src={goldenbarrel} alt="Золотой боченок лото" />
+            <img
+              src={`${process.env.REACT_APP_SERVER_URL}${gbImage}`}
+              alt="Золотой боченок лото"
+            />
           </div>
 
           <div className={style.golden_barrel__items}>

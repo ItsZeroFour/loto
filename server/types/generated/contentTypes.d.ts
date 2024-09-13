@@ -430,6 +430,9 @@ export interface ApiMobilnayaLotereyaMobilnayaLotereya
     email: Attribute.String;
     phone: Attribute.String;
     footer_description: Attribute.Text;
+    golden_barrel_image: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
