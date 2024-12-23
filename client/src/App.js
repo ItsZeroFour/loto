@@ -16,6 +16,7 @@ import Banner from "./components/banner/Banner";
 function App() {
   const [data, setData] = useState(null);
   const containerRef = useRef(null);
+  const [os, setOs] = useState("");
 
   const getData = async () => {
     try {
