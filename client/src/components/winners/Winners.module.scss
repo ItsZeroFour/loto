@@ -39,7 +39,15 @@
         align-items: center;
 
         img {
+          width: 250px;
+          height: 350px;
+          object-fit: contain;
           margin-top: 40px;
+
+          @media (max-width: 425px) {
+            width: 200px;
+            height: 250px;
+          }
         }
 
         @media (max-width: 425px) {
