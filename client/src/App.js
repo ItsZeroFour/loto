@@ -11,6 +11,7 @@ import Advantages from "./components/advantages/Advantages";
 import Winners from "./components/winners/Winners";
 import HowToParticipate from "./components/how_to_participate/HowToParticipate";
 import WhereBuy from "./components/where_buy/WhereBuy";
+import Banner from "./components/banner/Banner";
 
 function App() {
   const [data, setData] = useState(null);
@@ -41,10 +42,22 @@ function App() {
     }
   }, []);
 
-  console.log(data);
+  useEffect(() => {
+    const checkOs = (agent) => {
+      if (agent.indexOf("Android") > 0) {
+        setOs("Android");
+      }
+    };
+
+    checkOs(navigator.userAgent);
+  }, []);
+
+  console.log(navigator.userAgent.indexOf("Android"));
 
   return (
     <div className="App">
+      {os === "Android" && <Banner />}
+
       {!data ? (
         <div class="preloader">
           <div class="circle circle_green"></div>
