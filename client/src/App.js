@@ -12,11 +12,21 @@ import Winners from "./components/winners/Winners";
 import HowToParticipate from "./components/how_to_participate/HowToParticipate";
 import WhereBuy from "./components/where_buy/WhereBuy";
 import Banner from "./components/banner/Banner";
+import { useSearchParams } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState(null);
   const containerRef = useRef(null);
   const [os, setOs] = useState("");
+
+  const [searchParams] = useSearchParams();
+
+  const [externalId, setExternalId] = useState("");
+  const [utmCampaign, setUtmCampaign] = useState("");
+  const [gbid, setGbid] = useState("");
+  const [utmCreative, setUtmCreative] = useState("");
+  const [utmTerm, setUtmTerm] = useState("");
+  const [utmSource, setUtmSource] = useState("");
 
   const getData = async () => {
     try {
@@ -42,6 +52,59 @@ function App() {
       return () => scroll.destroy();
     }
   }, []);
+
+  useEffect(() => {
+    function setUtmToLocalstorage() {
+      localStorage.setItem("external_id", searchParams.get("external_id"));
+      localStorage.setItem("utm_campaign", searchParams.get("utm_campaign"));
+      localStorage.setItem("gbid", searchParams.get("gbid"));
+      localStorage.setItem("utm_creative", searchParams.get("utm_creative"));
+      localStorage.setItem("utm_term", searchParams.get("utm_term"));
+      localStorage.setItem("utm_source", searchParams.get("utm_source"));
+    }
+
+    if (
+      searchParams.get("external_id") &&
+      searchParams.get("utm_campaign") &&
+      searchParams.get("gbid") &&
+      searchParams.get("utm_creative") &&
+      searchParams.get("utm_term") &&
+      searchParams.get("utm_source")
+    ) {
+      setUtmToLocalstorage();
+    }
+
+    setExternalId(
+      searchParams.get("external_id") !== null
+        ? searchParams.get("external_id")
+        : localStorage.getItem("external_id")
+    );
+    setUtmCampaign(
+      searchParams.get("utm_campaign") !== null
+        ? searchParams.get("utm_campaign")
+        : localStorage.getItem("utm_campaign")
+    );
+    setGbid(
+      searchParams.get("gbid") !== null
+        ? searchParams.get("gbid")
+        : localStorage.getItem("gbid")
+    );
+    setUtmCreative(
+      searchParams.get("utm_creative") !== null
+        ? searchParams.get("utm_creative")
+        : localStorage.getItem("utm_creative")
+    );
+    setUtmTerm(
+      searchParams.get("utm_term") !== null
+        ? searchParams.get("utm_term")
+        : localStorage.getItem("utm_term")
+    );
+    setUtmSource(
+      searchParams.get("utm_source") !== null
+        ? searchParams.get("utm_source")
+        : localStorage.getItem("utm_source")
+    );
+  }, [searchParams]);
 
   useEffect(() => {
     const checkOs = (agent) => {
@@ -80,6 +143,12 @@ function App() {
                 desc={data.description}
                 linkUrl={data.link_url}
                 headBg={data.head_bg.data.attributes.url}
+                externalId={externalId}
+                utmCampaign={utmCampaign}
+                gbid={gbid}
+                utmCreative={utmCreative}
+                utmTerm={utmTerm}
+                utmSource={utmSource}
               />
               <GoldenBarrel
                 title={data.golden_barrel_title}
@@ -87,6 +156,12 @@ function App() {
                 text2={data.golden_barrel_text_2}
                 linkUrl={data.link_url}
                 gbImage={data.golden_barrel_image.data.attributes.url}
+                externalId={externalId}
+                utmCampaign={utmCampaign}
+                gbid={gbid}
+                utmCreative={utmCreative}
+                utmTerm={utmTerm}
+                utmSource={utmSource}
               />
               <Advantages
                 advImage1={data.advantage_item_image_1.data.attributes.url}
@@ -111,6 +186,12 @@ function App() {
                 winnerCount3={data.winner_count_3}
                 winnersDescription={data.winners_description}
                 linkUrl={data.link_url}
+                externalId={externalId}
+                utmCampaign={utmCampaign}
+                gbid={gbid}
+                utmCreative={utmCreative}
+                utmTerm={utmTerm}
+                utmSource={utmSource}
               />
 
               <HowToParticipate
@@ -135,6 +216,12 @@ function App() {
                 wbItemTitle4={data.where_buy_item_title_4}
                 wbItemText4={data.where_buy_item_text_4}
                 linkUrl={data.link_url}
+                externalId={externalId}
+                utmCampaign={utmCampaign}
+                gbid={gbid}
+                utmCreative={utmCreative}
+                utmTerm={utmTerm}
+                utmSource={utmSource}
               />
             </main>
 

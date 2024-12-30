@@ -14,6 +14,13 @@ const Winners = ({
   winnerCount3,
   winnersDescription,
   linkUrl,
+  externalId,
+  utmMedium,
+  utmCampaign,
+  gbid,
+  utmCreative,
+  utmTerm,
+  utmSource,
 }) => {
   return (
     <section className={style.winners}>
@@ -62,7 +69,11 @@ const Winners = ({
           <div className={style.winners__text}>
             <h3>Хочешь так же?</h3>
             <p>{winnersDescription}</p>
-            <Link to={linkUrl}>Хочу так же</Link>
+            <Link
+              to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}`}
+            >
+              Хочу так же
+            </Link>
           </div>
         </div>
       </div>

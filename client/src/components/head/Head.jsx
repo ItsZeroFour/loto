@@ -2,7 +2,19 @@ import React from "react";
 import style from "./Head.module.scss";
 import { Link } from "react-router-dom";
 
-const Head = ({ title, desc, linkUrl, headBg }) => {
+const Head = ({
+  title,
+  desc,
+  linkUrl,
+  headBg,
+  externalId,
+  utmMedium,
+  utmCampaign,
+  gbid,
+  utmCreative,
+  utmTerm,
+  utmSource,
+}) => {
   return (
     <section className={style.head__cover} id="head">
       <div
@@ -19,7 +31,11 @@ const Head = ({ title, desc, linkUrl, headBg }) => {
             <aside className={style.head__left}>
               <h1 dangerouslySetInnerHTML={{ __html: title }} />
               <p className={style.head__desc}>{desc}</p>
-              <Link to={linkUrl}>Принять участие</Link>
+              <Link
+                to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}`}
+              >
+                Принять участие
+              </Link>
             </aside>
 
             <aside className={style.head__right}>
