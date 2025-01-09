@@ -35,7 +35,16 @@
   flex-direction: column;
   gap: 20px;
   z-index: 2;
-  
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+
+  width: 50vw;
+
+  @media (max-width: 1190px) {
+    width: 100%;
+  }
+
   h1 {
     font-size: 48px;
     font-weight: 800;
