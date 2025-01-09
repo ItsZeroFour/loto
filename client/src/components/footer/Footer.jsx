@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Footer.module.scss";
 import { Link } from "react-router-dom";
+import file from "../../assets/privacy_stoloto.pdf";
 
 const Footer = ({ email, phone, footer_desc, logo }) => {
   return (
@@ -25,6 +26,9 @@ const Footer = ({ email, phone, footer_desc, logo }) => {
 
           <aside className={style.footer__right}>
             <p>{footer_desc}</p>
+            <Link to={file} target="_blank">
+              Политика в отношении обработки персональных данных
+            </Link>
           </aside>
         </div>
       </div>
