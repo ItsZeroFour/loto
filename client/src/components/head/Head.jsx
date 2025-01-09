@@ -14,6 +14,7 @@ const Head = ({
   utmCreative,
   utmTerm,
   utmSource,
+  tags,
 }) => {
   return (
     <section className={style.head__cover} id="head">
@@ -29,7 +30,7 @@ const Head = ({
         <div className="container">
           <div className={style.head__wrapper}>
             <aside className={style.head__left}>
-              <h1 dangerouslySetInnerHTML={{ __html: title }} />
+              <h1>{tags.h1}</h1>
               <p className={style.head__desc}>{desc}</p>
               <Link
                 to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}`}

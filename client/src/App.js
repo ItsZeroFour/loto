@@ -13,6 +13,7 @@ import HowToParticipate from "./components/how_to_participate/HowToParticipate";
 import WhereBuy from "./components/where_buy/WhereBuy";
 import Banner from "./components/banner/Banner";
 import { useSearchParams } from "react-router-dom";
+import { metaTags } from "../src/data/meta";
 
 function App() {
   const [data, setData] = useState(null);
@@ -27,6 +28,8 @@ function App() {
   const [utmCreative, setUtmCreative] = useState("");
   const [utmTerm, setUtmTerm] = useState("");
   const [utmSource, setUtmSource] = useState("");
+
+  const [tags, setTags] = useState(metaTags.default);
 
   const getData = async () => {
     try {
@@ -116,7 +119,25 @@ function App() {
     checkOs(navigator.userAgent);
   }, []);
 
-  console.log(navigator.userAgent.indexOf("Android"));
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utmContent = params.get("utm_content");
+
+    if (utmContent && metaTags[utmContent]) {
+      setTags(metaTags[utmContent]);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.title = tags.title.replace(/&mdash;/g, "—");
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        tags.description.replace(/&mdash;/g, "—")
+      );
+    }
+  }, [tags]);
 
   return (
     <div className="App">
@@ -149,6 +170,7 @@ function App() {
                 utmCreative={utmCreative}
                 utmTerm={utmTerm}
                 utmSource={utmSource}
+                tags={tags}
               />
               <GoldenBarrel
                 title={data.golden_barrel_title}
