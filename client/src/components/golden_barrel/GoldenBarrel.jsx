@@ -17,6 +17,7 @@ const GoldenBarrel = ({
   utmCreative,
   utmTerm,
   utmSource,
+  utmContent
 }) => {
   return (
     <section className={style.golden_barrel}>
@@ -46,7 +47,7 @@ const GoldenBarrel = ({
 
           <div className={style.golden_barrel__link}>
             <Link
-              to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}`}
+              to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}&utm_content=${utmContent}`}
             >
               Купить билеты
             </Link>

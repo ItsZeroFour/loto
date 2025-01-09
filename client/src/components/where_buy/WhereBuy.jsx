@@ -20,6 +20,7 @@ const WhereBuy = ({
   utmCreative,
   utmTerm,
   utmSource,
+  utmContent
 }) => {
   return (
     <section className={style.where_buy}>
@@ -55,7 +56,7 @@ const WhereBuy = ({
 
           <div className={style.where_buy__link}>
             <Link
-              to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}`}
+              to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}&utm_content=${utmContent}`}
             >
               Купить билет
             </Link>

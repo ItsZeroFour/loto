@@ -14,6 +14,7 @@ const Head = ({
   utmCreative,
   utmTerm,
   utmSource,
+  utmContent,
   tags,
 }) => {
   return (
@@ -33,7 +34,7 @@ const Head = ({
               <h1>{tags.h1}</h1>
               <p className={style.head__desc}>{desc}</p>
               <Link
-                to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}`}
+                to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}&utm_content=${utmContent}`}
               >
                 Принять участие
               </Link>

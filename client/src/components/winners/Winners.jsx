@@ -21,6 +21,7 @@ const Winners = ({
   utmCreative,
   utmTerm,
   utmSource,
+  utmContent
 }) => {
   return (
     <section className={style.winners}>
@@ -70,7 +71,7 @@ const Winners = ({
             <h3>Хочешь так же?</h3>
             <p>{winnersDescription}</p>
             <Link
-              to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}`}
+              to={`${linkUrl}?external_id=${externalId}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&gbid=${gbid}&utm_creative=${utmCreative}&utm_term=${utmTerm}&utm_source=${utmSource}&utm_content=${utmContent}`}
             >
               Хочу так же
             </Link>

@@ -28,6 +28,7 @@ function App() {
   const [utmCreative, setUtmCreative] = useState("");
   const [utmTerm, setUtmTerm] = useState("");
   const [utmSource, setUtmSource] = useState("");
+  const [utmContent, setUtmContent] = useState("");
 
   const [tags, setTags] = useState(metaTags.default);
 
@@ -64,6 +65,7 @@ function App() {
       localStorage.setItem("utm_creative", searchParams.get("utm_creative"));
       localStorage.setItem("utm_term", searchParams.get("utm_term"));
       localStorage.setItem("utm_source", searchParams.get("utm_source"));
+      localStorage.setItem("utm_content", searchParams.get("utm_content"));
     }
 
     if (
@@ -72,7 +74,8 @@ function App() {
       searchParams.get("gbid") &&
       searchParams.get("utm_creative") &&
       searchParams.get("utm_term") &&
-      searchParams.get("utm_source")
+      searchParams.get("utm_source") &&
+      searchParams.get("utm_content")
     ) {
       setUtmToLocalstorage();
     }
@@ -106,6 +109,11 @@ function App() {
       searchParams.get("utm_source") !== null
         ? searchParams.get("utm_source")
         : localStorage.getItem("utm_source")
+    );
+    setUtmContent(
+      searchParams.get("utm_content") !== null
+        ? searchParams.get("utm_content")
+        : localStorage.getItem("utm_content")
     );
   }, [searchParams]);
 
@@ -170,6 +178,7 @@ function App() {
                 utmCreative={utmCreative}
                 utmTerm={utmTerm}
                 utmSource={utmSource}
+                utmContent={utmContent}
                 tags={tags}
               />
               <GoldenBarrel
@@ -184,6 +193,7 @@ function App() {
                 utmCreative={utmCreative}
                 utmTerm={utmTerm}
                 utmSource={utmSource}
+                utmContent={utmContent}
               />
               <Advantages
                 advImage1={data.advantage_item_image_1.data.attributes.url}
@@ -214,6 +224,7 @@ function App() {
                 utmCreative={utmCreative}
                 utmTerm={utmTerm}
                 utmSource={utmSource}
+                utmContent={utmContent}
               />
 
               <HowToParticipate
@@ -244,6 +255,7 @@ function App() {
                 utmCreative={utmCreative}
                 utmTerm={utmTerm}
                 utmSource={utmSource}
+                utmContent={utmContent}
               />
             </main>
 
